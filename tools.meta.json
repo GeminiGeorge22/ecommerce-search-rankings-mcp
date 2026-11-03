@@ -1,0 +1,9 @@
+{
+  "junglee/Amazon-crawler": "Use when you need Amazon product details or search/category results (title, price, ASIN, rating, reviews count) from product, search or category URLs.",
+  "delicious_zebu/ebay-product-listing-scraper": "Use when you need active eBay search results or category listings with price, condition, seller rating, shipping and sold count.",
+  "e-commerce/walmart-fast-product-scraper": "Use when you need Walmart.com or Walmart.ca search or category results with price, availability, rating and seller.",
+  "epctex/google-shopping-scraper": "Use when you need Google Shopping results for a query: product, price, merchant and reviews across stores.",
+  "piotrv1001/aliexpress-listings-scraper": "Use when you need AliExpress search results with price, discount, rating and sales volume for a ship-to country.",
+  "autofacts/shopify": "Use when you need the product catalog of a public Shopify store: variants, prices, SKUs and stock.",
+  "publicrecords/etsy-search-scraper": "Use when you need what ranks on Etsy for a keyword, category or market page: position, price, rating, review count, Bestseller/Star Seller badges and whether the listing is an ad."
+}
