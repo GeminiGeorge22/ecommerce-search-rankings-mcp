@@ -1,0 +1,9 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": [
+    "GeminiGeorge22"
+  ],
+  "name": "E-commerce Search & Rankings MCP",
+  "description": "E-commerce search results and product rankings across Amazon, eBay, Walmart, Google Shopping, Etsy. Hosted remote MCP via Apify plus an open-source stdio proxy.",
+  "category": "Web Scraping"
+}

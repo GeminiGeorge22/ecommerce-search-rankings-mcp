@@ -1,0 +1,52 @@
+{
+  "name": "ecommerce-search-rankings-mcp",
+  "version": "0.1.0",
+  "description": "Stdio MCP server: e-commerce search results and product rankings across amazon, ebay, walmart, google shopping, etsy via Apify's hosted MCP gateway",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "ecommerce-search-rankings-mcp": "src/server.js"
+  },
+  "main": "src/proxy.js",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/proxy.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "apify",
+    "ecommerce",
+    "product-search",
+    "amazon",
+    "ebay",
+    "walmart"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2"
+  },
+  "mcpProxy": {
+    "actors": [
+      "junglee/Amazon-crawler",
+      "delicious_zebu/ebay-product-listing-scraper",
+      "e-commerce/walmart-fast-product-scraper",
+      "epctex/google-shopping-scraper",
+      "piotrv1001/aliexpress-listings-scraper",
+      "autofacts/shopify",
+      "publicrecords/etsy-search-scraper"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.GeminiGeorge22/ecommerce-search-rankings-mcp",
+  "title": "E-commerce Search & Rankings MCP",
+  "description": "E-commerce search results and product rankings across Amazon, eBay, Walmart, Google Shopping, Etsy.",
+  "repository": {
+    "url": "https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=junglee/Amazon-crawler,delicious_zebu/ebay-product-listing-scraper,e-commerce/walmart-fast-product-scraper,epctex/google-shopping-scraper,piotrv1001/aliexpress-listings-scraper,autofacts/shopify,publicrecords/etsy-search-scraper"
+    }
+  ]
+}
