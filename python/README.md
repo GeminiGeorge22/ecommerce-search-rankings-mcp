@@ -1,5 +1,7 @@
 # ecommerce-search-rankings-mcp (Python)
 
+<!-- mcp-name: io.github.GeminiGeorge22/ecommerce-search-rankings-mcp -->
+
 Python version of the [ecommerce-search-rankings-mcp](https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp) stdio MCP server, built on the official [`mcp`](https://pypi.org/project/mcp/) Python SDK. Same tools, same `APIFY_TOKEN` env var, same hosted endpoint as the Node.js server.
 
 Stdio MCP server: e-commerce search results and product rankings across amazon, ebay, walmart, google shopping, etsy via Apify's hosted MCP gateway
@@ -11,15 +13,17 @@ It answers `initialize` and `tools/list` locally from the bundled `tools.json` (
 Requires Python 3.10+. With [uv](https://docs.astral.sh/uv/):
 
 ```bash
-uvx --from "git+https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp#subdirectory=python" ecommerce-search-rankings-mcp
+uvx ecommerce-search-rankings-mcp
 ```
 
 With pip:
 
 ```bash
-pip install "git+https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp#subdirectory=python"
+pip install ecommerce-search-rankings-mcp
 ecommerce-search-rankings-mcp
 ```
+
+To run the latest unreleased code from GitHub instead of the PyPI release: `uvx --from "git+https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp#subdirectory=python" ecommerce-search-rankings-mcp`.
 
 MCP client config:
 
@@ -28,7 +32,7 @@ MCP client config:
   "mcpServers": {
     "ecommerce-search-rankings": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp#subdirectory=python", "ecommerce-search-rankings-mcp"],
+      "args": ["ecommerce-search-rankings-mcp"],
       "env": { "APIFY_TOKEN": "YOUR_APIFY_TOKEN" }
     }
   }
