@@ -111,14 +111,14 @@ A matching Python version of this server lives in [`python/`](python/), built on
   "mcpServers": {
     "ecommerce-search-rankings": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp#subdirectory=python", "ecommerce-search-rankings-mcp"],
+      "args": ["ecommerce-search-rankings-mcp"],
       "env": { "APIFY_TOKEN": "YOUR_APIFY_TOKEN" }
     }
   }
 }
 ```
 
-Or with pip: `pip install "git+https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp#subdirectory=python"`, then run `ecommerce-search-rankings-mcp`. Python tests: `cd python && pip install -e ".[test]" && env -u APIFY_TOKEN python -m pytest`.
+Or with pip: `pip install ecommerce-search-rankings-mcp`, then run `ecommerce-search-rankings-mcp`. Python tests: `cd python && pip install -e ".[test]" && env -u APIFY_TOKEN python -m pytest`.
 
 ## See also
 
