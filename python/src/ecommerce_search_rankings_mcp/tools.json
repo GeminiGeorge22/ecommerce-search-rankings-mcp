@@ -1308,7 +1308,7 @@
         "properties": {
           "searchQueries": {
             "title": "Search terms",
-            "description": "What to search for on AliExpress, one term per line. The Actor builds the search URL for you — this is the easiest way to start. Example: [\"wireless earbuds\"]",
+            "description": "What to search for on AliExpress, one term per line (a comma-separated list on one line is split too). The Actor builds the search URL for you — this is the easiest way to start. Example: [\"wireless earbuds\"]",
             "type": "array",
             "items": {
               "type": "string"
@@ -1501,18 +1501,8 @@
           },
           "proxy": {
             "title": "Proxy configuration",
-            "description": "Select proxies to be used by your crawler.",
-            "type": "object",
-            "default": {
-              "useApifyProxy": true
-            },
-            "properties": {
-              "useApifyProxy": {
-                "type": "boolean",
-                "description": "Use Apify Proxy for requests. Leave the default unless the Actor's README says otherwise.",
-                "default": true
-              }
-            }
+            "description": "Advanced, not shown in the form. Every run goes out through Apify's residential proxy, whatever this field holds. Only its apifyProxyCountry is read, the United States unless set: a store that sells in several currencies shows its page, its prices and its currency, for the country the request comes from.",
+            "type": "object"
           }
         },
         "required": [
@@ -1529,8 +1519,8 @@
     },
     {
       "name": "publicrecords--etsy-search-scraper",
-      "title": "Etsy Scraper — Listings, Prices & Best Sellers",
-      "description": "Etsy Scraper — Listings, Prices & Best Sellers. Scrape Etsy search results by keyword, category or market page: title, price, rating, reviews, Bestseller and Star Seller badges, ad flag and search rank.\n\nWhen to use: Use when you need what ranks on Etsy for a keyword, category or market page: position, price, rating, review count, Bestseller/Star Seller badges and whether the listing is an ad.\n\nReturns: the run's dataset rows as structured JSON (one row per result), plus the run and dataset IDs for paging the full dataset.\n\nBehavior: starts one run of the Apify Actor \"publicrecords/etsy-search-scraper\" through Apify's hosted MCP gateway (mcp.apify.com) with your own APIFY_TOKEN; the run uses your Apify account. Read-only: it only reads public web data and changes nothing on the source site. Docs: https://apify.com/publicrecords/etsy-search-scraper",
+      "title": "Etsy Scraper — Listings, Prices, Best Sellers & Ad Flags",
+      "description": "Etsy Scraper — Listings, Prices, Best Sellers & Ad Flags. Etsy scraper for product research: search results by keyword, market page or category URL with price, rating, reviews, Bestseller and Star Seller badges, ad flag, shop and Etsy's rank position. One row per listing. Works with Claude.\n\nWhen to use: Use when you need what ranks on Etsy for a keyword, category or market page: position, price, rating, review count, Bestseller/Star Seller badges and whether the listing is an ad.\n\nReturns: the run's dataset rows as structured JSON (one row per result), plus the run and dataset IDs for paging the full dataset.\n\nBehavior: starts one run of the Apify Actor \"publicrecords/etsy-search-scraper\" through Apify's hosted MCP gateway (mcp.apify.com) with your own APIFY_TOKEN; the run uses your Apify account. Read-only: it only reads public web data and changes nothing on the source site. Docs: https://apify.com/publicrecords/etsy-search-scraper",
       "inputSchema": {
         "type": "object",
         "properties": {
@@ -1692,7 +1682,7 @@
         }
       },
       "annotations": {
-        "title": "Etsy Scraper — Listings, Prices & Best Sellers",
+        "title": "Etsy Scraper — Listings, Prices, Best Sellers & Ad Flags",
         "readOnlyHint": true,
         "destructiveHint": false,
         "idempotentHint": false,
